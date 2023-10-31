@@ -1,5 +1,93 @@
-template-repository (1.0-1) unstable; urgency=medium
+xsimd (10.0.0-3) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * upload xsimd 10 to unstable (xtl 0.7.5 now available)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Drew Parsons <dparsons@debian.org>  Mon, 25 Sep 2023 10:40:07 +0200
+
+xsimd (10.0.0-2) experimental; urgency=medium
+
+  * Team upload.
+  * drop -mfpu=neon buildflag for armhf. Closes: #1029568.
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 05 May 2023 18:46:50 +0200
+
+xsimd (10.0.0-1) experimental; urgency=medium
+
+  * New upstream release (Closes: 1027757)
+
+ -- Julien Lamy <lamy@unistra.fr>  Tue, 03 Jan 2023 08:42:02 +0100
+
+xsimd (8.1.0-7) unstable; urgency=medium
+
+  * Mark as incompatible with pythran < 0.11
+
+ -- Julien Lamy <lamy@unistra.fr>  Mon, 11 Jul 2022 09:26:15 +0200
+
+xsimd (8.1.0-6) unstable; urgency=medium
+
+  * Mark as incompatible with xtensor < 0.24
+
+ -- Julien Lamy <lamy@unistra.fr>  Sat, 09 Jul 2022 08:33:17 +0200
+
+xsimd (8.1.0-5) unstable; urgency=medium
+
+  * Run autopkgtest on all architectures
+
+ -- Julien Lamy <lamy@unistra.fr>  Thu, 30 Jun 2022 09:01:13 +0200
+
+xsimd (8.1.0-4) unstable; urgency=medium
+
+  * Reintroduce build on all arches (Closes: #1010595)
+  * Run autopkgtests on supported architectures only
+
+ -- Julien Lamy <lamy@unistra.fr>  Mon, 27 Jun 2022 06:58:27 +0200
+
+xsimd (8.1.0-3) unstable; urgency=medium
+
+  * Fix compilation on arm64 and armhf
+
+ -- Julien Lamy <lamy@unistra.fr>  Fri, 24 Jun 2022 11:27:00 +0200
+
+xsimd (8.1.0-2) unstable; urgency=medium
+
+  * Depend on xtl
+  * Fix compatibility with xtl::xcomplex
+
+ -- Julien Lamy <lamy@unistra.fr>  Wed, 21 Jun 2022 11:09:47 +0200
+
+xsimd (8.1.0-1) unstable; urgency=medium
+
+  [ Ileana Dumitrescu ]
+  * New upstream version 8.0.5
+  * updated changelog
+
+  [ Julien Lamy ]
+  * New upstream version 8.1.0
+  * Restrict to officially supported architectures (Closes: #1010595)
+
+ -- Julien Lamy <lamy@unistra.fr>  Fri, 03 Jun 2022 16:37:16 +0200
+
+xsimd (8.0.3-1) experimental; urgency=medium
+
+  * New upstream version 8.0.3
+
+ -- Julien Lamy <lamy@unistra.fr>  Tue, 16 Nov 2021 07:22:08 +0100
+
+xsimd (7.6.0-2) unstable; urgency=medium
+
+  * Fix failing autopkgtest on i386 (Closes: #994169)
+
+ -- Julien Lamy <lamy@unistra.fr>  Thu, 28 Oct 2021 07:54:28 +0200
+
+xsimd (7.6.0-1) unstable; urgency=medium
+
+  * New upstream version 7.6.0
+
+ -- Julien Lamy <lamy@unistra.fr>  Thu, 14 Oct 2021 01:00:57 +0530
+
+xsimd (7.5.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #867915)
+
+ -- Julien Lamy <lamy@unistra.fr>  Wed, 21 Apr 2021 11:56:53 +0200

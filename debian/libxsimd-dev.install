@@ -1,0 +1,4 @@
+usr/include/xsimd
+usr/lib/*/cmake/xsimd
+usr/lib/*/pkgconfig/xsimd.pc
+
