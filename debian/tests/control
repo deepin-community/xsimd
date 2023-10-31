@@ -1,0 +1,9 @@
+Test-Command: ./debian/tests/compile.sh g++
+Depends: g++,
+         libxsimd-dev
+Restrictions: allow-stderr
+
+Test-Command: ./debian/tests/compile.sh clang++
+Depends: clang,
+         libxsimd-dev
+Restrictions: allow-stderr

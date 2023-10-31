@@ -1,4 +1,43 @@
 #!/usr/bin/make -f
 
+# DH_VERBOSE := 1
+export LC_ALL=C.UTF-8
+
+BUILD_OPTIONS += -DENABLE_XTL_COMPLEX=ON
+
+# Turn on unit testing only if
+# - The architecture is officially supported
+# - The nocheck flag is not specified
+OFFICIALLY_SUPPORTED := amd64 arm64 armhf i386
+ifeq (,$(filter $(DEB_HOST_ARCH),$(OFFICIALLY_SUPPORTED)))
+  BUILD_OPTIONS += -DBUILD_TESTS=OFF
+else ifneq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+  BUILD_OPTIONS += -DBUILD_TESTS=OFF
+else
+  BUILD_OPTIONS += -DBUILD_TESTS=ON
+endif
+
+ifeq ($(DEB_HOST_ARCH),armhf)
+  export DEB_CXXFLAGS_MAINT_APPEND = -mfloat-abi=hard
+endif
+
+include /usr/share/dpkg/default.mk
+
 %:
-	dh $@
+	dh $@ --with sphinxdoc
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(BUILD_OPTIONS)
+
+override_dh_auto_build:
+	dh_auto_build
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) -C docs html
+endif
+
+override_dh_auto_clean:
+	dh_auto_clean
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) -C docs clean
+	rm -rf docs/xml
+endif

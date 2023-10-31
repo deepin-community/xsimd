@@ -1,0 +1,10 @@
+Document: xsimd-doc
+Title: xsimd Documentation
+Author: Johan Mabille, Sylvain Corlay, Wolf Vollprecht and Martin Renou
+Abstract: This is the reference documentation for the xsimd library.
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/libxsimd-dev/html/index.html
+Files: /usr/share/doc/libxsimd-dev/html/*.html
+
