@@ -1,3 +1,9 @@
+xsimd (10.0.0-3deepin1) unstable; urgency=medium
+
+  * feat: add sw64 support.
+
+ -- hudeng <hudeng@deepin.org>  Wed, 04 Jun 2025 18:20:51 +0800
+
 xsimd (10.0.0-3) unstable; urgency=medium
 
   * Team upload.
